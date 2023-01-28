@@ -1,0 +1,78 @@
+.instruction
+    &__title
+        font-weight: 400
+        font-size: 60px
+        line-height: 60px
+        color: $dark
+        margin-bottom: 32px
+        @include breakpoint(md)
+            margin-bottom: 38px
+            font-size: 36px
+            line-height: 40px
+    &__list
+        display: flex
+        flex-wrap: wrap
+        counter-reset: section
+        margin-bottom: 13px
+    &__item
+        position: relative
+        display: flex
+        flex: 0 0 25%
+        max-width: 25%
+        padding-top: 30px
+        padding-bottom: 57px
+        @include breakpoint(xl)
+            margin-bottom: 37px
+        @include breakpoint(md)
+            margin-bottom: 20px
+            padding: 0
+        &::after
+            counter-increment: section
+            content: counter(section) ""
+            position: absolute
+            top: -8px
+            font-size: 280px
+            line-height: 1
+            color: #f2f2f2
+            z-index: -1
+            @include breakpoint(md)
+                display: none
+        &--one
+            &::after
+                left: 119px
+        &--two
+            &::after
+                left: 111px
+        &--three
+            &::after
+                left: 114px
+        &--four
+            &::after
+                left: 128px
+        @include breakpoint(xl)
+            flex: 0 0 50%
+            max-width: 50%
+        @include breakpoint(md)
+            flex: 0 0 100%
+            max-width: 100%
+    &__wrap
+        @include breakpoint(md)
+            display: flex
+            align-items: center
+    &__img
+        margin-bottom: 31px
+        @include breakpoint(md)
+            max-width: 60px
+            margin-right: 20px
+            margin-bottom: 0
+    &__text
+        max-width: 240px
+        font-family: 'Arial', sans-serif
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        color: $dark-grey-2
+        @include breakpoint(md)
+            max-width: 100%
+            font-size: 14px
+            line-height: 18px
