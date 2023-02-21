@@ -1,0 +1,57 @@
+.footer
+    background-color: $grey
+    padding: 58px 0
+    @include breakpoint(xl)
+        position: relative
+        bottom: -200px
+    @include breakpoint(md)
+        padding: 40px 0 20px 0
+        bottom: -115px
+    &__wrap
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        @include breakpoint(md)
+            justify-content: center
+        hr
+            margin: 0
+    &__item
+        display: flex
+        justify-content: space-between
+        align-items: center
+        // &:not(:last-child)
+        //     @include breakpoint(md)
+        //         margin-bottom: 50px
+        &:nth-child(1)
+            @include breakpoint(md)
+                margin-bottom: 30px
+        &:nth-child(3)
+            @include breakpoint(md)
+                margin: 20px 0
+        &:nth-child(5)
+            @include breakpoint(md)
+                margin-top: 20px
+        @include breakpoint(md)
+            flex-basis: 100%
+            justify-content: center
+        &--social
+            flex-basis: 130px
+        &--logo
+            flex-basis: 163px
+            @include breakpoint(md)
+                justify-content: space-between
+    &__link
+        &:not(:last-child)
+            @include breakpoint(md)
+                margin-right: 30px
+
+    &__title
+        font-family: 'Arial', sans-serif
+        font-size: 16px
+        color: $dark-grey-2
+
+hr
+    width: 100%
+    border-width: 1px
+    border-color: $grey-3
